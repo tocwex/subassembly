@@ -1,0 +1,121 @@
+/* Set the background color and center the content */
+body {
+    width: 100%;
+    height: 100vh;
+    background: #04080f;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container styling - center child elements */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Inner container styling */
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 72px;
+}
+
+/* Additional styles for child elements */
+.text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.subtitle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+}
+
+.subtitle-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.sponsor-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.sponsor-box {
+    width: 100px;
+    height: 100px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-logo {
+    width: 100px;
+    height: 62px;
+    background: #e4e4d8;
+}
+
+.sponsor-img {
+    width: 100px;
+    height: 100px;
+}
+
+/* styles.css */
+.overline {
+    color: #e4e4d8;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 16px;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+}
+
+.title {
+    color: #e4e4d8;
+    font-size: 48px;
+    font-family: Lora;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    color: #e4e4d8;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 16px;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+}
+
+.body-copy {
+    color: #e4e4d8;
+    font-size: 16px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    line-height: 20px;
+    word-wrap: break-word;
+}
