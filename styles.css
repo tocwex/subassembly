@@ -1,9 +1,15 @@
+/* Import the external CSS file */
+@import url("https://90981e03b3525c060ac438353e4a3300.cdn.bubble.io/f1719608058163x825753518615514200/Safiro%20Medium.css");
+@import url("https://90981e03b3525c060ac438353e4a3300.cdn.bubble.io/f1719727743303x447523347489316540/Chaney%20Wide.css");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+
 /* Set the background color and center the content */
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #04080f;
     margin: 0;
+    padding: 24px; /* Add padding if needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    padding: 0 16px; /* Add padding for mobile */
 }
 
 /* Inner container styling */
@@ -25,6 +31,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 72px;
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 600px; /* Optional max width */
 }
 
 /* Additional styles for child elements */
@@ -53,36 +61,35 @@ body {
 }
 
 .sponsor-container {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 48px;
+    align-items: center;
+    gap: 24px;
 }
 
 .sponsor-box {
-    width: 100px;
-    height: 100px;
+    display: flex;
+    width: auto;
+    height: auto;
     padding-top: 19px;
     padding-bottom: 19px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sponsor-logo {
-    width: 100px;
-    height: 62px;
-    background: #e4e4d8;
-}
-
-.sponsor-img {
-    width: 100px;
-    height: 100px;
+.sponsor-box img {
+    max-width: 100%;
+    max-height: auto;
 }
 
 /* styles.css */
+.svg-fill {
+    fill: #e8e8e8;
+}
+
 .overline {
-    color: #e4e4d8;
+    color: #e8e8e8;
     font-size: 12px;
     font-family: Inter;
     font-weight: 500;
@@ -93,17 +100,18 @@ body {
 }
 
 .title {
-    color: #e4e4d8;
-    font-size: 48px;
-    font-family: Lora;
+    color: #e8e8e8;
+    font-size: 36px;
+    font-family: "Chaney Wide";
     font-weight: 400;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .subtitle {
-    color: #e4e4d8;
+    color: #e8e8e8;
     font-size: 12px;
-    font-family: Inter;
+    font-family: "Safiro";
     font-weight: 500;
     text-transform: uppercase;
     line-height: 16px;
@@ -112,7 +120,7 @@ body {
 }
 
 .sponsor-copy {
-    color: #e4e4d8;
+    color: #e8e8e8;
     font-size: 16px;
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
@@ -121,10 +129,10 @@ body {
 }
 
 .body-copy {
-    max-width: 400px;
-    color: #e4e4d8;
+    max-width: 600px;
+    color: #e8e8e8;
     font-size: 16px;
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Safiro", monospace;
     font-weight: 400;
     line-height: 20px;
     word-wrap: break-word;
@@ -132,9 +140,9 @@ body {
 }
 
 .inline-link {
-    color: #e4e4d8;
+    color: #e8e8e8;
     font-size: 16px;
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Safiro", monospace;
     font-weight: 400;
     line-height: 20px;
     font-style: underline;
@@ -142,9 +150,9 @@ body {
 
 .footnote {
     max-width: 400px;
-    color: #e4e4d8;
+    color: #e8e8e8;
     font-size: 12px;
-    font-family: Lora;
+    font-family: "Safiro";
     font-weight: 200;
     font-style: italic;
     line-height: 20px;
@@ -153,16 +161,50 @@ body {
 }
 
 .button {
-    color: #e4e4d8;
+    color: #e8e8e8;
     font-size: 16px;
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
     line-height: 20px;
     background: #04080f;
-    border: 1px solid #e4e4d8;
+    border: 1px solid #e8e8e8;
     padding: 12px 24px;
     cursor: pointer;
     transition:
         background 0.3s,
         color 0.3s;
+    text-decoration: none;
+}
+
+.button:hover {
+    text-decoration: underline; /* Apply underline on hover */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    gap: 16px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow wrapping to new line if needed */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    .body-copy {
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+        padding: 0 16px; /* Add padding for readability */
+    }
+
+    .title {
+        font-size: 24px; /* Adjust title size for smaller screens */
+    }
+
+    .button {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on narrow screens */
+        gap: 8px; /* Adjust gap for stacked buttons */
+    }
 }
