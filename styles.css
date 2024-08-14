@@ -17,7 +17,7 @@ p {
     max-width: 540px;
     color: #e8e8e8;
     font-size: 18px;
-    font-family: "Safiro";
+    font-family: "Safiro Medium";
     font-weight: 400;
     line-height: 24px;
     word-wrap: break-word;
@@ -30,7 +30,7 @@ ul {
     max-width: 540px;
     color: #e8e8e8;
     font-size: 18px;
-    font-family: "Safiro";
+    font-family: "Safiro Medium";
     font-weight: 400;
     line-height: 20px;
     word-wrap: break-word;
@@ -80,7 +80,7 @@ ul li {
 .overline {
     color: #e8e8e8;
     font-size: 12px;
-    font-family: "Safiro";
+    font-family: "Safiro Medium";
     font-weight: 500;
     text-transform: uppercase;
     line-height: 16px;
@@ -102,7 +102,7 @@ ul li {
 .subtitle {
     color: #e8e8e8;
     font-size: 12px;
-    font-family: "Safiro";
+    font-family: "Safiro Medium";
     font-weight: 500;
     text-transform: uppercase;
     line-height: 16px;
@@ -114,7 +114,7 @@ ul li {
 .sponsor-copy {
     color: #e8e8e8;
     font-size: 16px;
-    font-family: "Safiro";
+    font-family: "Safiro Medium";
     font-weight: 400;
     line-height: 20px;
     word-wrap: break-word;
@@ -126,7 +126,7 @@ ul li {
 .inline-link {
     color: #e8e8e8;
     font-size: 16px;
-    font-family: "Safiro", monospace;
+    font-family: "Safiro Medium";
     font-weight: 400;
     line-height: 20px;
     font-style: underline;
@@ -137,7 +137,7 @@ ul li {
     padding: 24px;
     color: #e8e8e8;
     font-size: 12px;
-    font-family: "Safiro";
+    font-family: "Safiro Medium";
     font-weight: 200;
     font-style: italic;
     line-height: 20px;
@@ -179,33 +179,27 @@ ul li {
 /* Media Queries for Mobile */
 @media (max-width: 540px) {
     body {
-        width: 90%;
-        min-height: 100vh;
-        background: #04080f;
-        margin: auto;
         padding: 24px; /* Add padding if needed */
-        justify-content: center;
-        align-items: center;
     }
 
     p {
-        max-width: 540px;
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
         color: #e8e8e8;
         font-size: 16px;
-        font-family: "Safiro";
+        font-family: "Safiro Medium";
         font-weight: 400;
         line-height: 20px;
         word-wrap: break-word;
-        text-align: left-align;
+        text-align: left; /* Corrected text-align property */
         padding: 12px;
         margin: auto;
     }
 
     ul {
-        max-width: 540px;
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
         color: #e8e8e8;
         font-size: 16px;
-        font-family: "Safiro";
+        font-family: "Safiro Medium";
         font-weight: 400;
         line-height: 20px;
         word-wrap: break-word;
@@ -222,22 +216,26 @@ ul li {
 
     .sponsor-box {
         display: flex;
-        width: auto;
+        width: 100%; /* Ensure it doesn't exceed the viewport width */
         height: auto;
         padding: 24px;
         justify-content: center;
         align-items: center;
+        margin: auto;
     }
 
     .sponsor-box img {
-        max-width: 100%;
-        max-height: auto;
+        max-width: 200px;
+        max-height: 150px;
     }
+
     .title-group {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 8px;
         margin: auto;
-        max-width: 600px;
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
         padding-top: 24px;
         padding-bottom: 24px;
     }
@@ -249,9 +247,10 @@ ul li {
         align-items: center;
         gap: 12px;
         margin: auto;
-        max-width: 600px;
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
         padding: 24px;
     }
+
     .overline {
         color: #e8e8e8;
         font-size: 10px;
@@ -304,11 +303,11 @@ ul li {
         font-family: "Safiro", monospace;
         font-weight: 400;
         line-height: 20px;
-        font-style: underline;
+        text-decoration: underline;
     }
 
     .footnote {
-        max-width: 400px;
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
         padding: 24px;
         color: #e8e8e8;
         font-size: 12px;
@@ -343,10 +342,10 @@ ul li {
 
     .button-group {
         display: flex;
+        flex-direction: column; /* Stack buttons vertically on narrow screens */
         justify-content: center; /* Center buttons horizontally */
         align-items: center; /* Center buttons vertically */
-        gap: 16px; /* Space between buttons */
-        flex-wrap: wrap; /* Allow wrapping to new line if needed */
+        gap: 8px; /* Space between buttons */
         padding: 12px;
         margin: 12px;
     }
